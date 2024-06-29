@@ -1,0 +1,98 @@
+:root {
+  font-size: 62.5%;
+  --cor-Fundo: #FFFFFF;
+  --cor-Degrade1: #C2E9FB;
+  --cor-Degrade2: #A1C4FD;
+  --cor-Sombra: #0000001A;
+  --cor-Fonteh1: #34355B;
+  --cor-Botao: #7879F1;
+  --cor-Input: #DCE2E9;
+}
+
+body {
+  background: linear-gradient(287.56deg, var(--cor-Degrade1) 0%, var(--cor-Degrade2) 100%);
+  font-size: 1.6rem;
+  display: grid;
+  align-items: center;
+  height: 100vh;
+}
+
+body,
+main,
+input button {
+  font-family: "DM Sans", sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+.principal-page {
+  background-color: var(--cor-Fundo);
+  box-shadow: 0 .2rem .4rem var(--cor-Sombra);
+  border-radius: .6rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+  width: min(42.8rem, 90%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Tela 1 */
+
+.principal-page h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  padding-bottom: 1.6rem;
+}
+
+.principal-page h1,
+p {
+  color: var(--cor-Fonteh1);
+}
+
+.principal-page p {
+  opacity: .8;
+  font-size: 1.6rem;
+}
+
+.insert-dates {
+  padding-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.insert-dates input {
+  border: none;
+  background-color: var(--cor-Input);
+  padding: 1.6rem;
+  width: min(5.8rem, 90%);
+  border-radius: .8rem 0 0 .8rem;
+}
+
+button {
+  padding: 1.6rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 0 .8rem .8rem 0;
+  background-color: var(--cor-Botao);
+  font-family: "DM Sans", sans-serif;
+  color: var(--cor-Fundo);
+  cursor: pointer;
+  transition: background .3s;
+}
+
+button:hover {
+  background-color: #6363c4;
+}
+
+/* Tela 2 */
+
+.video2 h2 {
+  font-size: 2.4rem;
+  font-weight: normal;
+  padding-bottom: 3.3rem;
+}
+
+.video2 button {
+  border-radius: .8rem;
+}
