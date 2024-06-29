@@ -1,14 +1,19 @@
+// Variáveis
 const randomNumber = Math.round(Math.random()*10);
 const video1 = document.querySelector(".video1");
 const video2 = document.querySelector(".video2");
+const tryButton = document.querySelector("#btnTry");
+const tryAgainButton = document.querySelector("#btnTryAgain");
 let xAgains = 1;
+
+// Eventos
 
 const scriptNumberTry = (event) => {
   event.preventDefault(); //Não submeter o formulário.
   const numberInput = document.querySelector("#inputNumber");
 
   if (Number(numberInput.value) == randomNumber) {
-    video1.classList.add('hide'); //Abrir o video1.
+    video1.classList.add('hide');
     video2.classList.remove('hide');
 
     document.querySelector(".video2 h2")
@@ -18,12 +23,13 @@ const scriptNumberTry = (event) => {
   numberInput.value = "";
 }
 
-const tryButton = document.querySelector("#btnTry"); //Chama o ID para objeto.
-const tryAgainButton = document.querySelector("#btnTryAgain");
+tryButton.addEventListener('click', scriptNumberTry); 
+tryAgainButton.addEventListener('click', scriptNumberAction);
 
-tryButton.addEventListener('click', scriptNumberTry); //nome evento/função.
-tryAgainButton.addEventListener('click', function () {
+// Funções
+
+function scriptNumberAction () {
   video1.classList.remove('hide');
   video2.classList.add('hide');
   xAgains = 1;
-})
+}
